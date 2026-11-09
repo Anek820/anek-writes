@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anek Writes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="strip">Pick any topic. Get writing that's actually fun to read.</div>
+
+  <header class="top">
+    <a class="logo" href="#top">anek <em>writes</em></a>
+    <nav>
+      <a href="#top">Write</a>
+      <a href="#history">History</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>What do you want to write <em>about</em>?</h1>
+
+      <form id="form" autocomplete="off">
+        <input id="topic" type="text" maxlength="200" placeholder="Type any topic, like 'why do we yawn'" required>
+
+        <div class="row">
+          <div class="lengths" role="radiogroup" aria-label="Length">
+            <label><input type="radio" name="size" value="short"><span>Short</span></label>
+            <label><input type="radio" name="size" value="medium" checked><span>Medium</span></label>
+            <label><input type="radio" name="size" value="long"><span>Long</span></label>
+          </div>
+          <button id="go" type="submit">Write it</button>
+        </div>
+      </form>
+
+      <p class="try">
+        Not sure? Try:
+        <button type="button" class="chip">The history of chai</button>
+        <button type="button" class="chip">How black holes work</button>
+        <button type="button" class="chip">Why we get brain freeze</button>
+      </p>
+    </section>
+
+    <section id="output" class="output" aria-live="polite"></section>
+
+    <section id="history" class="history">
+      <h2>Your past <em>topics</em></h2>
+      <p id="empty" class="muted">Nothing here yet. Your finished pieces will show up here.</p>
+      <ul id="list"></ul>
+      <button id="clear" type="button" class="link hidden">Clear history</button>
+    </section>
+  </main>
+
+  <footer>anek <em>writes</em> &middot; research by Google search, words by Gemini</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
